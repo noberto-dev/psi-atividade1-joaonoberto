@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <div class="card">
+        <h3>{{livro['titulo']}}</h3>
+        <p>{{livro['autor']}}</p>
+        <p>{{livro['ano']}}</p>
+        <p>{{livro['genero']}}</p>
+    </div>
+
+    <div class="resenhas">
+        {% for resenha in resenhas %}
+            <strong>Nota: {{resenha['nota']}}</strong>
+            <p>Descrição: {{resenha['texto']}}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}  
