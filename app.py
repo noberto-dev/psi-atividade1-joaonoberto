@@ -50,7 +50,9 @@ def login():
         return redirect(url_for('index'))
     
     flash('nome ou senhas inválidos', 'erro')
-@app.route('/logout', methods=['POST'])
+    return render_template('login.html'), 401
+
+@app.route('/logout', methods=['GET'])
 def logout():
 
     session.pop("usuario", None)
