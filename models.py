@@ -37,9 +37,9 @@ def buscar_livro(livro_id):
 
 def loginIsTrue(user_name, senha):
     for u in usuarios:
-        if u["nome"] == user_name:
-            if u["senha"] == senha:
-                return True
+        if u["nome"] == user_name and u["senha"] == senha:
+            return True
+        
         return False
 def resenhas_do_livro(livro_id):
     """Devolve apenas as resenhas vinculadas ao livro informado."""
