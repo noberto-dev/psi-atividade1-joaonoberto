@@ -11,7 +11,7 @@
         <p>{{livro['autor']}}</p>
         <p>{{livro['ano']}}</p>
         <p>{{livro['genero']}}</p>
-        <a href="{{url_for('livro_detalhe', livro_id=livro.id)}}">Detalhes</a>
+        <a href="{{url_for('catalog.ver_livro', livro_id=livro.id)}}">Detalhes</a>
     </div>
     
 
